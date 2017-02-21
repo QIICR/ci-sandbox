@@ -25,16 +25,16 @@ deployment:
     commands:
       - echo "deployment-release-fedorov"
 
-  nightly-qiicr:
+  nightly-QIICR:
     branch: master
-    owner: qiicr
+    owner: QIICR
     commands:
-      - echo "deployment-nightly-qiicr"
-  release-qiicr:
+      - echo "deployment-nightly-QIICR"
+  release-QIICR:
     tag: /v[0-9]+\.[0-9]+\.[0-9]+/
-    owner: qiicr
+    owner: QIICR
     commands:
-      - echo "deployment-release-qiicr"
+      - echo "deployment-release-QIICR"
 
   nightly-jcfr:
     branch: master

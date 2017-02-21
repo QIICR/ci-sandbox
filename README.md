@@ -1,9 +1,9 @@
 # ci-sandbox
-My sandbox for experimenting with CI services.
+QIICR sandbox for experimenting with CI services.
 
 |              | CircleCI                                                                                                       | TravisCI                                                                                                      | Appveyor                                                                                                                              |
 |--------------|----------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Build Status | [![Circle CI](https://circleci.com/gh/jcfr/ci-sandbox.svg?style=svg)](https://circleci.com/gh/jcfr/ci-sandbox) | [![TravisCI](https://travis-ci.org/jcfr/ci-sandbox.svg?branch=master)](https://travis-ci.org/jcfr/ci-sandbox) | [![Appveyor](https://ci.appveyor.com/api/projects/status/81c2532cyie43bhu?svg=true)](https://ci.appveyor.com/project/jcfr/ci-sandbox) |
+| Build Status | [![Circle CI](https://circleci.com/gh/qiicr/ci-sandbox.svg?style=svg)](https://circleci.com/gh/qiicr/ci-sandbox) | [![TravisCI](https://travis-ci.org/qiicr/ci-sandbox.svg?branch=master)](https://travis-ci.org/qiicr/ci-sandbox) | [![Appveyor](https://ci.appveyor.com/api/projects/status/vm3avkj4k86mwctl?svg=true)](https://ci.appveyor.com/project/qiicr/ci-sandbox) |
 
 
 # Disable all notifications
@@ -22,7 +22,7 @@ notifications:
 
 The email notification settings are controlled by the user.
 
-![](https://raw.githubusercontent.com/jcfr/ci-sandbox/master/images/circleci-perproject-email-notification-settings.png)
+![](https://raw.githubusercontent.com/qiicr/ci-sandbox/master/images/circleci-perproject-email-notification-settings.png)
 
 
 * TravisCI
@@ -44,19 +44,19 @@ notifications:
   deployment:
     nightly:
       branch: master
-      owner: jcfr
+      owner: qiicr
       commands:
         - echo "deployment-nightly"
     release:
       tag: /v[0-9]+\.[0-9]+\.[0-9]+/
-      owner: jcfr
+      owner: qiicr
       commands:
         - echo "deployment-release"
   ```
 
   Submission when ``master`` is updated:
 
-  ![](https://raw.githubusercontent.com/jcfr/ci-sandbox/master/images/circleci-deployment-release-nightly-master-updated.png)
+  ![](https://raw.githubusercontent.com/qiicr/ci-sandbox/master/images/circleci-deployment-release-nightly-master-updated.png)
 
   Submission after creating and pushing a tag:
 
@@ -67,7 +67,7 @@ notifications:
 
   works as expected:
 
-  ![](https://raw.githubusercontent.com/jcfr/ci-sandbox/master/images/circleci-deployment-release-nightly-signed-tag-pushed_1.png)
+  ![](https://raw.githubusercontent.com/qiicr/ci-sandbox/master/images/circleci-deployment-release-nightly-signed-tag-pushed_1.png)
 
-  ![](https://raw.githubusercontent.com/jcfr/ci-sandbox/master/images/circleci-deployment-release-nightly-signed-tag-pushed_2.png)
+  ![](https://raw.githubusercontent.com/qiicr/ci-sandbox/master/images/circleci-deployment-release-nightly-signed-tag-pushed_2.png)
 

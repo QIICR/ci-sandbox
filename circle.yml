@@ -8,6 +8,10 @@ dependencies:
 test:
   override:
     - echo "test"
+    - git branch
+    - git branch -r
+    - git tag --list
+    - for t in $(git tag --list); do git show $t; done
 
 deployment:
   nightly-fedorov:

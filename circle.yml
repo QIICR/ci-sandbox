@@ -10,13 +10,35 @@ test:
     - echo "test"
 
 deployment:
-  nightly:
+  nightly-fedorov:
+    branch: master
+    owner: fedorov
+    commands:
+      - echo "deployment-nightly-fedorov"
+  release-fedorov:
+    tag: /v[0-9]+\.[0-9]+\.[0-9]+/
+    owner: fedorov
+    commands:
+      - echo "deployment-release-fedorov"
+
+  nightly-qiicr:
     branch: master
     owner: qiicr
     commands:
-      - echo "deployment-nightly"
-  release:
+      - echo "deployment-nightly-qiicr"
+  release-qiicr:
     tag: /v[0-9]+\.[0-9]+\.[0-9]+/
     owner: qiicr
     commands:
-      - echo "deployment-release"
+      - echo "deployment-release-qiicr"
+
+  nightly-jcfr:
+    branch: master
+    owner: jcfr
+    commands:
+      - echo "deployment-nightly-jcfr"
+  release-jcfr:
+    tag: /v[0-9]+\.[0-9]+\.[0-9]+/
+    owner: jcfr
+    commands:
+      - echo "deployment-release-jcfr"

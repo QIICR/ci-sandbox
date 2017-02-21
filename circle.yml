@@ -11,7 +11,8 @@ test:
     - git branch
     - git branch -r
     - git tag --list
-    - for t in $(git tag --list); do git show $t; done
+    - (for t in $(git tag --list); do git show $t; done) > tag_list
+    - cat ./tag_list
 
 deployment:
   nightly-fedorov:
